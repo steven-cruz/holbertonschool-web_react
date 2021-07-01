@@ -3,36 +3,47 @@ interface Student {
     lastName: string;
     age: number;
     location: string;
-}
-
-const student1: Student = {
+  }
+  
+  const student1: Student = {
     firstName: "Jhonatan",
     lastName: "Legarda",
     age: 24,
-    location: "Cali"
-};
-
-const student2: Student = {
-    firstName: "John",
-    lastName: "Sigga",
-    age: 28,
-    location: "San Francisco"
-};
-
-const studentsList: Array<Student> = [student1, student2];
-
-const table = document.createElement("table");
-const tbBody = document.createElement("tbody")
-for (let i = 0; i < studentsList.length; i++) {
-    const row = document.createElement("tr");
-    const column = document.createElement("td");
-    const textCol1 = document.createTextNode(studentsList[i].firstName);
-    column.appendChild(textCol1);
-    row.appendChild(column);
-    tbBody.appendChild(row);
-
-    const textCol2 = document.createTextNode(studentsList[i].location);
-    column.appendChild(textCol2);
-    row.appendChild(column);
-    tbBody.appendChild(row);
-}
+    location: "Cali",
+  };
+  
+  const student2: Student = {
+    firstName: "Karla",
+    lastName: "Dermond",
+    age: 26,
+    location: "New York",
+  };
+  
+  const studentsList: Array<Student> = [student1, student2];
+  
+  const body: HTMLBodyElement = document.getElementsByTagName("body")[0];
+  
+  const table: HTMLTableElement = document.createElement("table");
+  const thead: HTMLTableSectionElement = document.createElement("thead");
+  const tbody: HTMLTableSectionElement = document.createElement("tbody");
+  
+  const rowHead: HTMLTableRowElement = thead.insertRow(0);
+  const cell1Head: HTMLTableCellElement = rowHead.insertCell(0);
+  const cell2Head: HTMLTableCellElement = rowHead.insertCell(1);
+  
+  cell1Head.innerHTML = "firstName";
+  cell2Head.innerHTML = "location";
+  
+  table.append(thead);
+  
+  studentsList.forEach((student) => {
+    const row: HTMLTableRowElement = tbody.insertRow(0);
+    const cell1: HTMLTableCellElement = row.insertCell(0);
+    const cell2: HTMLTableCellElement = row.insertCell(1);
+  
+    cell1.innerHTML = student.firstName;
+    cell2.innerHTML = student.location;
+  });
+  
+  table.append(tbody);
+  body.append(table);
