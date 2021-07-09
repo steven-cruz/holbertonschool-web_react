@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.App{
+  font-family: 'Roboto', sans-serif;
+}
+
+.App-header {
+  color: rgb(230, 0, 0);
+}
+
+.App-logo {
+  height: 40vmin;
+  display: inline-block;
+  max-width: 30%
+}
+
+.Title {
+  font-size: 6vmin;
+  display: inline-block;
+  position: absolute;
+  top: 12%;
+  left: 20%;
+  max-width: 70%;
+}
+
+.App-body {
+  border-top: 4px solid rgb(230, 0, 0);
+  border-bottom: 4px solid rgb(230, 0, 0);
+  padding-bottom: 15%;
+}
+.App-body p {
+  margin-left: 3%;
+  padding-top: 3%;
+}
+
+.App-footer{
+  text-align: center;
+}
