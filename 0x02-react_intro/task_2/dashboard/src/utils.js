@@ -12,5 +12,9 @@ export function getFooterCopy(isIndex) {
     }
 }
 
+export function getLatesNotification( ){
+    return ("<strong>Urgent requirement</strong> - complete by EOD");
+}
+
 // way to export a function in react
 export { getFullYear };
