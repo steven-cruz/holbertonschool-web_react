@@ -51,7 +51,7 @@ class App extends Component {
         <div className={css(styles.app)}>
           <Header />
         </div>
-        <div className={css(styles.body)}>
+        <div className={css(styles.appBody)}>
           {!isLoggedIn ? (
             <BodySectionWithMarginBottom title="Log in to continue">
               <Login />
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     borderBottom: `3px solid ${cssVars.mainColor}`,
   },
 
-  body: {
+  appBody: {
     display: "flex",
     justifyContent: "center",
   },

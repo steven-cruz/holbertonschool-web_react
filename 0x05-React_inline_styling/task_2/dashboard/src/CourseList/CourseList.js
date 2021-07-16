@@ -6,7 +6,7 @@ import { StyleSheet, css } from "aphrodite";
 
 function CourseList({ listCourses }) {
   return (
-    <table id="CourseList" className={css(styles.list)}>
+    <table id="CourseList" className={css(styles.courseList)}>
       <thead>
         <CourseListRow textFirstCell="Available courses" isHeader={true} />
         <CourseListRow
@@ -49,7 +49,7 @@ const cssVars = {
 };
 
 const styles = StyleSheet.create({
-  list: {
+  courseList: {
     border: `1px solid ${cssVars.borderTableColor}`,
     borderCollapse: "collapse",
     width: "95%",

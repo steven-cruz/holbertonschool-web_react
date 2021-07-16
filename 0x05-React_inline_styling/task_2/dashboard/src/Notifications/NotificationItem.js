@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { StyleSheet, css } from 'aphrodite';
+import { StyleSheet, css } from "aphrodite";
 
 const NotificationItem = React.memo(function NotificationItem({
   type,
@@ -11,13 +11,15 @@ const NotificationItem = React.memo(function NotificationItem({
 }) {
   let listItem;
 
-  let typeStyle = css(
-   (type === "urgent" ? styles.urgent : styles.default)
-  );
+  let typeStyle = css(type === "urgent" ? styles.urgent : styles.default);
 
   if (value) {
     listItem = (
-      <li className={typeStyle} data-notification-type={type} onClick={() => markAsRead(id)}>
+      <li
+        className={typeStyle}
+        data-notification-type={type}
+        onClick={() => markAsRead(id)}
+      >
         {value}
       </li>
     );
